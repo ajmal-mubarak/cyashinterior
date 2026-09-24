@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head><script>try{if(sessionStorage.getItem("cyash_splash_seen")){document.documentElement.classList.add("splash-done")}}catch(e){}</script><style>html.splash-done .fixed.inset-0.z-\[10000\]{display:none!important;opacity:0!important;pointer-events:none!important}</style>
+<head><script>try{var isHome=location.pathname==='/'||location.pathname==='/index.html'||location.pathname==='';if(!isHome||sessionStorage.getItem('cyash_seen')){document.documentElement.classList.add('splash-done')}}catch(e){}</script><style>html.splash-done .fixed.inset-0.z-\[10000\],html.splash-done [class*="z-[10000]"]{display:none!important;opacity:0!important;pointer-events:none!important;visibility:hidden!important}</style>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="preload" as="image" href="/logo.png"/>
