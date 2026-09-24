@@ -1,0 +1,18 @@
+Options -MultiViews -Indexes
+RewriteEngine On
+RewriteBase /
+
+# Redirect trailing slash ONLY if .html version exists
+RewriteCond %{REQUEST_URI} ^(.*[^/])/$
+RewriteCond %{DOCUMENT_ROOT}%1.html -f
+RewriteRule ^(.*)/$ /$1 [R=301,L]
+
+# Serve .html version if it exists
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L,QSA]
+
+# SPA fallback
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
