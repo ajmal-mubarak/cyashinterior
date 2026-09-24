@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head><script>try{var isHome=location.pathname==='/'||location.pathname==='/index.html'||location.pathname==='';if(!isHome||sessionStorage.getItem('cyash_seen')){document.documentElement.classList.add('splash-done')}}catch(e){}</script><style>html.splash-done .fixed.inset-0.z-\[10000\],html.splash-done [class*="z-[10000]"]{display:none!important;opacity:0!important;pointer-events:none!important;visibility:hidden!important}</style>
+<head><script>try{if(sessionStorage.getItem("cyash_nav")){document.documentElement.classList.add("nav-skip-splash")}}catch(e){}</script><style>html.nav-skip-splash .fixed.inset-0.z-\[10000\],html.nav-skip-splash [class*="z-[10000]"]{display:none!important;opacity:0!important;pointer-events:none!important;visibility:hidden!important}</style>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="preload" as="image" href="/logo.png"/>
@@ -920,5 +920,16 @@
       if (e.key === 'Escape') closeProjectModal();
     });
   </script>
+
+<script>
+(function() {
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest('a');
+    if (a && a.href && a.origin === window.location.origin && !a.hasAttribute('download') && a.target !== '_blank' && !a.getAttribute('href').startsWith('#')) {
+      try { sessionStorage.setItem('cyash_nav', '1'); } catch(err) {}
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>
