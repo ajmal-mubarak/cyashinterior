@@ -35,3 +35,21 @@
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1) !important;
   transform: translateY(-2px) !important;
 }
+
+/* Hero Badges Container with Guaranteed 10px Gap & 50/50 Alignment */
+.hero-badges-container {
+  position: absolute !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  left: -19px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 12px !important;
+  z-index: 30 !important;
+}
+@media (max-width: 1023px) {
+  .hero-badges-container {
+    display: none !important;
+  }
+}
+}
