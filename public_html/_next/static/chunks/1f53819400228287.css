@@ -247,3 +247,5 @@
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
   }
 }
+
+html.splash-done .fixed.inset-0.z-\[10000\] { display: none !important; opacity: 0 !important; pointer-events: none !important; }
