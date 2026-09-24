@@ -9,6 +9,56 @@
   <meta name="description" content="Explore CYASH Contracting portfolio of turnkey commercial, workspace, hospitality, and retail interior fit-out projects across Qatar."/>
   <link rel="icon" href="/favicon.ico" sizes="48x48" type="image/x-icon"/>
 <style>
+/* Luxury Floating Glass Capsule Navbar */
+.navbar-cards {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  margin-right: 16px !important;
+  padding: 5px 6px !important;
+  border-radius: 9999px !important;
+  background: rgba(14, 44, 83, 0.7) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  border: 1px solid rgba(196, 160, 95, 0.35) !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+@media (max-width: 767px) {
+  .navbar-cards {
+    display: none !important;
+  }
+}
+.nav-card-btn {
+  background-color: transparent !important;
+  border: 1px solid transparent !important;
+  box-shadow: none !important;
+  padding: 8px 22px !important;
+  border-radius: 9999px !important;
+  color: #f3f4f6 !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.03em !important;
+  text-decoration: none !important;
+  text-transform: capitalize !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.25s ease !important;
+}
+.nav-card-btn:hover {
+  color: #c4a05f !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
+  border-color: rgba(196, 160, 95, 0.3) !important;
+  transform: translateY(-1px) !important;
+}
+.nav-card-btn.nav-active {
+  background-color: #c4a05f !important;
+  color: #0e2c53 !important;
+  font-weight: 700 !important;
+  box-shadow: 0 2px 12px rgba(196, 160, 95, 0.4) !important;
+}
+
+
 /* Project Modal Lightbox Fixed Overlays */
 #project-modal {
   position: fixed !important;
